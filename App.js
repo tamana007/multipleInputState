@@ -9,14 +9,18 @@ function App() {
   // setPeople(list);
 
   function inputFunc(e){
+    e.preventDefault();
 // setPeople({...people},{e.target.Name:e.target.value})
 setPeople({...people,[e.target.Name]:e.target.value})
+console.log(people);
+// setPeople(e.target.value);
   }
   return (
-    <form>
-      <input Name='Name' value={people} onChange={inputFunc} />
-      <input Name='Password' value={people} onChange={inputFunc}/>
-      <input Name='email' value={people} onChange={inputFunc} />
+    <form onSubmit={inputFunc}>
+      <input name='name' value={people.Name} />
+      <input name='password' value={people.Password} />
+      <input name='email' value={people.email}  />
+      <button type='submit'>Submit</button>
 
 
     </form>
