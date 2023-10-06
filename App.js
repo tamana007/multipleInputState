@@ -1,24 +1,30 @@
 import logo from './logo.svg';
 import './App.css';
+import Navbar from './Navbar';
 import { useEffect, useRef, useState } from 'react';
 
 function App() {
 
-  const refContainer=useRef('');
-  const[value,setValue]=useState('0');
+  //:::::::::::::::::::::::::::::Custom API:::::::::::::::::::::::::
 
-  function handlBTN(){
-    refContainer.current++;
-    setValue(refContainer.current);
-  }
-  return(
-    <>
-    <p>testing mutating or persisting btw re-renders:{refContainer.current}</p>
-    <h4>{value}</h4>
-    <button onClick={handlBTN}>Click here</button>
-    </>
-  )
 
+  //:::::::::::::::::::::::::::UserRef:::::::::::::::::::::::::::::
+
+  // const refContainer=useRef('');
+  // const[value,setValue]=useState('0');
+
+  // function handlBTN(){
+  //   refContainer.current++;
+  //   setValue(refContainer.current);
+  // }
+  // return(
+  //   <>
+  //   <p>testing mutating or persisting btw re-renders:{refContainer.current}</p>
+  //   <h4>{value}</h4>
+  //   <button onClick={handlBTN}>Click here</button>
+  //   </>
+  // )
+//::::::::::::::::::::::::::::::::::::::::::::::::::
 //   const refcontainer=useRef('');
 
 //   function inputfunc(e){
@@ -88,6 +94,9 @@ function App() {
     // {/* // </form> */}
     // </>
   // );
+  return(
+    <><Navbar/></>
+  )
 }
 
 export default App;
