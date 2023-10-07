@@ -2,7 +2,8 @@ import React from 'react'
 
 function UserContainer() {
   return (
-    <div></div>
+    <h2>User Container</h2>
+    
   )
 }
 

@@ -11,7 +11,11 @@ function Navbar() {
   return (
     
     <div>
-      <NavLink/>
+      <nav>
+        <h5>Context API</h5>
+        <NavLink/>
+      </nav>
+      
       <button onClick={logout}>click</button>
       <h4>{value.Name}</h4>
     </div>
