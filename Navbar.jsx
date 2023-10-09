@@ -1,23 +1,33 @@
-import React, { useState } from 'react'
+import React, { useState,Context, useContext, createContext } from 'react'
+
 import NavLink from './NavLink'
+
+export const NavbarContext=createContext();
 
 function Navbar() {
 
-  const[value,setValue]=useState({Name:"Ali"});
+ 
+
+  const[user,setUser]=useState({Name:"Ali"});
 
   function logout(){
-    setValue('');
+    setUser('');
   }
+ 
   return (
     
     <div>
+      <NavbarContext.Provider value={{user,logout}}>
       <nav>
         <h5>Context API</h5>
         <NavLink/>
       </nav>
       
       <button onClick={logout}>click</button>
-      <h4>{value.Name}</h4>
+      <h4>{user.Name}</h4>
+
+      </NavbarContext.Provider>
+     
     </div>
   )
 }
